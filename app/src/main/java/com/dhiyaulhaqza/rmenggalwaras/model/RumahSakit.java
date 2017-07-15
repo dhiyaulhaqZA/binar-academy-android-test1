@@ -11,6 +11,15 @@ public class RumahSakit extends RealmObject {
     String dokter;
     String keterangan;
 
+    public RumahSakit() {
+    }
+
+    public RumahSakit(String pasien, String dokter, String keterangan) {
+        this.pasien = pasien;
+        this.dokter = dokter;
+        this.keterangan = keterangan;
+    }
+
     public String getPasien() {
         return pasien;
     }

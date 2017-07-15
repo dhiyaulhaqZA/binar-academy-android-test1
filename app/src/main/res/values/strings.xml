@@ -25,4 +25,5 @@
     <string name="dokter_18">Dr. Pandu</string>
     <string name="dokter_19">Dr. Aldi</string>
     <string name="dokter_20">Dr. Didin</string>
+    <string name="str_empty_view">Tidak ada data, sentuh tombol + untuk memulai</string>
 </resources>

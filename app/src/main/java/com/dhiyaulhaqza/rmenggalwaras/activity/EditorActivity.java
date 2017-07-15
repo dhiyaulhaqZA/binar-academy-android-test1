@@ -1,21 +1,28 @@
 package com.dhiyaulhaqza.rmenggalwaras.activity;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.dhiyaulhaqza.rmenggalwaras.R;
+import com.dhiyaulhaqza.rmenggalwaras.model.RumahSakit;
 
 import io.realm.Realm;
 
 public class EditorActivity extends AppCompatActivity {
 
     private Realm realm;
+
     private EditText etPasien;
     private Spinner spDokter;
     private EditText etKeterangan;
@@ -26,8 +33,13 @@ public class EditorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
+        setTitle("Tambah Data");
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         Realm.init(getApplicationContext());
-        realm = Realm.getDefaultInstance();
 
         setupView();
     }
@@ -61,6 +73,33 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     public void fabSave(View view) {
-        finish();
+        String pasien = etPasien.getText().toString().trim();
+        String dokter = selectedDokter;
+        String keterangan = etKeterangan.getText().toString().trim();
+
+        if (!(pasien.equals("") || dokter.equals("") || keterangan.equals(""))) {
+
+            RumahSakit rs = new RumahSakit(pasien, dokter, keterangan);
+            commitToRealm(rs);
+            finish();
+        } else {
+            Toast.makeText(this, "Semua data wajib diisi !", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void commitToRealm(RumahSakit rs) {
+        realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        realm.copyToRealm(rs);
+        realm.commitTransaction();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
