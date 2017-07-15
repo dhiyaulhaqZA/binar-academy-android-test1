@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">RM EnggalWaras</string>
+    <string name="nama_pasien">Nama Pasien</string>
+    <string name="nama_dokter">Nama Dokter</string>
+    <string name="keterangan_penyakit">Keterangan penyakit</string>
+
+    <!-- Nama dokter -->
+    <string name="dokter_1">Dr. Waskito</string>
+    <string name="dokter_2">Dr. Suyanti</string>
+    <string name="dokter_3">Dr. Suyanto</string>
+    <string name="dokter_4">Dr. Protomo</string>
+    <string name="dokter_5">Dr. Pritimi</string>
+    <string name="dokter_6">Dr. Robert</string>
+    <string name="dokter_7">Dr. Marco</string>
+    <string name="dokter_8">Dr. Lia Ayu</string>
+    <string name="dokter_9">Dr. Putri</string>
+    <string name="dokter_10">Dr. Putra</string>
+    <string name="dokter_11">Dr. Dono</string>
+    <string name="dokter_12">Dr. Kasino</string>
+    <string name="dokter_13">Dr. Indro</string>
+    <string name="dokter_14">Dr. William</string>
+    <string name="dokter_15">Dr. Wijaya</string>
+    <string name="dokter_16">Dr. Pratiwi</string>
+    <string name="dokter_17">Dr. Tomo</string>
+    <string name="dokter_18">Dr. Pandu</string>
+    <string name="dokter_19">Dr. Aldi</string>
+    <string name="dokter_20">Dr. Didin</string>
+</resources>

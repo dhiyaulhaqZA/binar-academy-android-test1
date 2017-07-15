@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dokter_array">
+        <item>@string/dokter_1</item>
+        <item>@string/dokter_2</item>
+        <item>@string/dokter_3</item>
+        <item>@string/dokter_4</item>
+        <item>@string/dokter_5</item>
+        <item>@string/dokter_6</item>
+        <item>@string/dokter_7</item>
+        <item>@string/dokter_8</item>
+        <item>@string/dokter_9</item>
+        <item>@string/dokter_10</item>
+        <item>@string/dokter_11</item>
+        <item>@string/dokter_12</item>
+        <item>@string/dokter_13</item>
+        <item>@string/dokter_14</item>
+        <item>@string/dokter_15</item>
+        <item>@string/dokter_16</item>
+        <item>@string/dokter_17</item>
+        <item>@string/dokter_18</item>
+        <item>@string/dokter_19</item>
+        <item>@string/dokter_20</item>
+    </string-array>
+</resources>
